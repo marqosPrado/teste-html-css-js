@@ -6,10 +6,13 @@ function somar() {
     n2 = parseInt(num2.value)
 
     let resultado = n1 + n2
-    const parentElement = document.getElementById('result');
-    const newElement = document.createElement('p');
+    const res = document.getElementById('result')
 
-    newElement.textContent = resultado;
-    parentElement.appendChild(newElement);
+    if (!n1 && !n2){
+        alert("Coloque um valor válido!")
+    }
+    else {res.innerHTML = `${resultado}`}
+    
+
 
 }
